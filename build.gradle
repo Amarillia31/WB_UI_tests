@@ -44,6 +44,7 @@ tasks.withType(JavaCompile) {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
+
 tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()

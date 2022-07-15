@@ -2,11 +2,16 @@ package com.elena.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebDriverRunner;
+import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.*;
+import static com.codeborne.selenide.Selenide.webdriver;
+import static com.codeborne.selenide.WebDriverConditions.*;
 
 public class MainPage {
     // locators
@@ -36,8 +41,8 @@ public class MainPage {
     public void openSellOnWbButton() { sellOnWbButton.shouldBe(visible).click(); }
     public void switchTab() { switchTo().window(1); }
     public void hoverMenu() {countryMenu.click();}
-    public void hoverMenu1() {radioButtonCountry.click();}
-    public void clickOnRadioButton(String countryName) {radioButtonCountry.$(byText(countryName)).click();}
+    public void clickOnGeolocation(String CountryName) {$(byText(CountryName)).click();}
+    public void checkCurrentUrl(String pageUrl) {webdriver().shouldHave(url(pageUrl));}
     public void checkChatBotIsAvailable() {chatBot.shouldBe(visible).click();}
     public void checkText(String header) {chatHeader.shouldHave(text(header));}
 }

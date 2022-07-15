@@ -2,6 +2,8 @@ package com.elena.helpers;
 
 import com.elena.config.Project;
 import com.codeborne.selenide.Configuration;
+import io.restassured.RestAssured;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -40,4 +42,5 @@ public class DriverSettings {
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         Configuration.browserCapabilities = capabilities;
     }
+
 }
