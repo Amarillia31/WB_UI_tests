@@ -23,6 +23,6 @@ public interface ProjectConfig extends Config {
     String remoteDriverUrl();
     @Key("videoStorage")
     String videoStorage();
-
+    @DefaultValue("https://www.wildberries.ru/")
     String webUrl();
 }
