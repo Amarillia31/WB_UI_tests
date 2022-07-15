@@ -76,7 +76,7 @@ test
 > 
 > <code>THREADS</code> – количество потоков.
 
-## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/12-Antipant-HW14/allure/)
+## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/AUTO-1117/6/allure/)
 
 ### :pushpin: Главная страница Allure-отчета
 
