@@ -3,6 +3,7 @@ package com.elena.tests;
 import com.elena.helpers.DriverUtils;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -10,7 +11,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -54,11 +54,12 @@ public class MainPageTests extends TestBase {
             mainPage.openSellOnWbButton();
         });
         step("check new tab is opened", () -> {
-            mainPage.switchTab();
+            mainPage.switchTab(1);
         });
     }
 
     @Test
+    @Tag("pain")
     @Description("Check chat bot is available")
     @DisplayName("Check chat bot is available")
     void changeCountry() {
@@ -71,6 +72,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
+    @Tag("pain")
     @Description("Check logs")
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
@@ -97,7 +99,7 @@ public class MainPageTests extends TestBase {
     @MethodSource("methodLocation")
     @Description("Geolocation")
     @DisplayName("Geolocation can be changed")
-    void Geolocation(String countryData, String expectedResult) {
+    void geolocation(String countryData, String expectedResult) {
         step("Open main page change geolocation", () -> {
             mainPage.hoverMenu();
         });
