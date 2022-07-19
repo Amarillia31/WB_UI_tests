@@ -22,7 +22,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Tests extends TestBase {
     @Test
-    @AllureId("11256")
     @Tags({@Tag("SearchPage"),@Tag("web")})
     @DisplayName("Check search is finding correct item")
     void simpleSearchTest() {
@@ -50,7 +49,6 @@ public class Tests extends TestBase {
     }
 
     @Test
-    @AllureId("11259")
     @Tags({@Tag("MainPage"),@Tag("web")})
     @DisplayName("Check headers menu is visible")
     void checkHeaders() {
@@ -69,7 +67,6 @@ public class Tests extends TestBase {
     }
 
     @Test
-    @AllureId("11255")
     @Tags({@Tag("MainPage"),@Tag("web")})
     @DisplayName("Check new tab is opened once user click Sell on Wildberries")
     void openSellPage() {
@@ -82,7 +79,6 @@ public class Tests extends TestBase {
     }
 
     @Test
-    @AllureId("11258")
     @Tags({@Tag("MainPage"),@Tag("web")})
     @DisplayName("Check chat bot is available")
     void changeCountry() {
@@ -95,7 +91,6 @@ public class Tests extends TestBase {
     }
 
     @Test
-    @AllureId("11257")
     @Tags({@Tag("MainPage"),@Tag("web")})
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
@@ -120,7 +115,6 @@ public class Tests extends TestBase {
     }
 
     @ParameterizedTest(name = "Check country changed to {0} and verify url {1}.")
-    @AllureId("11254")
     @Tags({@Tag("MainPage"),@Tag("web")})
     @MethodSource("methodLocation")
     @DisplayName("Geolocation can be changed.")
