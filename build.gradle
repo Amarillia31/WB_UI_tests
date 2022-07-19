@@ -67,9 +67,3 @@ tasks.withType(Test) {
         }
     }
 }
-
-task pain(type: Test) {
-    useJUnitPlatform {
-        includeTags 'pain'
-    }
-}

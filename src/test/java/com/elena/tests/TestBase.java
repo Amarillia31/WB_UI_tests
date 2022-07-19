@@ -4,9 +4,11 @@ import com.elena.config.Project;
 import com.elena.helpers.AllureAttachments;
 import com.elena.helpers.DriverSettings;
 import com.elena.helpers.DriverUtils;
+import com.elena.pages.AuthPage;
 import com.elena.pages.MainPage;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import com.elena.pages.SearchResultPage;
 import io.qameta.allure.junit5.AllureJunit5;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -20,11 +22,13 @@ import static com.codeborne.selenide.Selenide.open;
 @ExtendWith({AllureJunit5.class})
 public class TestBase {
     MainPage mainPage = new MainPage();
+    SearchResultPage searchResultPage = new SearchResultPage();
+    AuthPage authPage = new AuthPage();
+
     @BeforeAll
     static void beforeAll() {
             DriverSettings.configure();
     }
-
 
     @BeforeEach
     public void beforeEach() {

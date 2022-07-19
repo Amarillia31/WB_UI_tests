@@ -17,21 +17,19 @@ public class MainPage {
                     workAtWbButton = $(".simple-menu__link.simple-menu__link--employment.j-wba-header-item"),
                     reportProblemButton = $(".btn-chat__text"),
                     countryMenu = $(".simple-menu__link.simple-menu__link--country.j-wba-header-item"),
-                    radioButtonCountry = $(".radio-with-text__full-country.hide-mobile"),
                     chatBot = $(".smm-fixed__toggle"),
+                    loginPage =$(".j-main-login"),
                     chatHeader = $("h2.chat__header");
-
-    ElementsCollection itemCard = $$(".product-card__brand-name");
-
 
     public void searchItem(String productName) {
         mainPageSearchField.setValue(productName).pressEnter();}
 
-    public void chekItem(String productName) {
-        itemCard.findBy(text(productName)).shouldBe(visible);}
-
     public void checkDeliveryButton() {
         deliveryButton.shouldBe(visible);}
+
+    public void clickToLoginPage() {
+        loginPage.click();}
+
     public void checkSellOnWbButton() {
         sellOnWbButton.shouldBe(visible);}
 

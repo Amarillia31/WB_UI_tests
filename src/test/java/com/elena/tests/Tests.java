@@ -1,9 +1,12 @@
 package com.elena.tests;
 
 import com.elena.helpers.DriverUtils;
-import io.qameta.allure.Description;
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -14,22 +17,41 @@ import java.util.stream.Stream;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Story("WEB UI Testing")
+@Owner("allure8")
 
-public class MainPageTests extends TestBase {
+public class Tests extends TestBase {
     @Test
-    @Description("Check search is finding correct item")
+    @AllureId("11256")
+    @Tags({@Tag("SearchPage"),@Tag("web")})
     @DisplayName("Check search is finding correct item")
     void simpleSearchTest() {
         step("Open main page and put 'печенье' into search line ", () -> {
             mainPage.searchItem("печенье");
         });
         step("Click Enter and check results", () -> {
-            mainPage.chekItem("Печенье");
+            searchResultPage.checkItem("Печенье");
         });
     }
 
     @Test
-    @Description("Check headers menu is visible")
+    @Tags({@Tag("AuthPage"),@Tag("web")})
+    @DisplayName("Attempt to login without phone number")
+    void attemptToLogin() {
+        step("Open login page ", () -> {
+            mainPage.clickToLoginPage();
+        });
+        step("Click on send code button", () -> {
+            authPage.clickRequestCode();
+        });
+        step("Check error message text", () -> {
+            authPage.checkErrorMessage("Введите номер телефона!");
+        });
+    }
+
+    @Test
+    @AllureId("11259")
+    @Tags({@Tag("MainPage"),@Tag("web")})
     @DisplayName("Check headers menu is visible")
     void checkHeaders() {
         step("Open main page and check headers menu delivery is available ", () -> {
@@ -47,7 +69,8 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @Description("Check new tab is opened once user click Sell on Wildberries")
+    @AllureId("11255")
+    @Tags({@Tag("MainPage"),@Tag("web")})
     @DisplayName("Check new tab is opened once user click Sell on Wildberries")
     void openSellPage() {
         step("Open main page and check headers menu sell on main page is available ", () -> {
@@ -59,8 +82,8 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @Tag("pain")
-    @Description("Check chat bot is available")
+    @AllureId("11258")
+    @Tags({@Tag("MainPage"),@Tag("web")})
     @DisplayName("Check chat bot is available")
     void changeCountry() {
         step("Open main page and check chat bot is available and click", () -> {
@@ -72,8 +95,8 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @Tag("pain")
-    @Description("Check logs")
+    @AllureId("11257")
+    @Tags({@Tag("MainPage"),@Tag("web")})
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
         step("Console logs should not contain text 'SEVERE'", () -> {
@@ -95,10 +118,12 @@ public class MainPageTests extends TestBase {
                 Arguments.of("Узбекистан","https://uz.wildberries.ru/")
         );
     }
-    @ParameterizedTest(name = "check country changed to {0} and verify url {1}")
+
+    @ParameterizedTest(name = "Check country changed to {0} and verify url {1}.")
+    @AllureId("11254")
+    @Tags({@Tag("MainPage"),@Tag("web")})
     @MethodSource("methodLocation")
-    @Description("Geolocation")
-    @DisplayName("Geolocation can be changed")
+    @DisplayName("Geolocation can be changed.")
     void geolocation(String countryData, String expectedResult) {
         step("Open main page change geolocation", () -> {
             mainPage.hoverMenu();
