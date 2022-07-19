@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class AuthPage {
     // locators
     private final SelenideElement  requestCode = $("#requestCode"),
-                            errorText =$(".field-validation-error") ;
+                                   errorText =$(".field-validation-error") ;
 
     public void clickRequestCode() {
         requestCode.pressEnter();}

@@ -7,6 +7,7 @@
 - <a href="#robot-сборки-в-Jenkins">Сборки в Jenkins</a>
 - <a href="#keyboard-запуск-из-терминала">Запуск из терминала</a>
 - <a href="#bar_chart-allure-отчет">Allure отчет</a>
+- <a href="#pushpin-Тест-кейсы-в-Allure-Test-Ops-отчете">Allure TestOps отчет</a>
 - <a href="#robot-отчет-в-telegram">Отчет в Telegram</a>
 - <a href="#film_projector-видео-пример-прохождения-тестов">Видео пример прохождения тестов</a>
 
@@ -27,18 +28,19 @@
 ## :clipboard: Реализованные проверки
 - Проверка ошибок в консоли :heavy_check_mark:
 - Проверка функциональности поиска :heavy_check_mark:
+- Проверка попытки логина без ввода номера телефона :heavy_check_mark:
 - Проверка доступности кнопок хедера на странице :heavy_check_mark:
 - Проверка доступности чат бота :heavy_check_mark:
 - Проверка открытия нового окна :heavy_check_mark:
 - Параметризованный тест на смену геолокации :heavy_check_mark:
 
 ## :robot: Сборки в Jenkins
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/AUTO-1117/">Параметризированная сборка в Jenkins со всеми тестами</a>
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/C01-elena_alexandrovna31-WB-WebUI/">Параметризированная сборка в Jenkins со всеми тестами</a>
 <p align="center">
 <img title="Jenkins Job Run with parameters" src="images/screenshots/jenkins1.png">
 </p>
 
-###  Главная страница сборки <a target="_blank" href="https://jenkins.autotests.cloud/job/AUTO-1117/">Jenkins</a>
+###  Главная страница сборки <a target="_blank" href="https://jenkins.autotests.cloud/job/C01-elena_alexandrovna31-WB-WebUI/">Jenkins</a>
 <p align="center">
 <img title="Jenkins Job Run with parameters" src="images/screenshots/jenkins0.png">
 </p>
@@ -76,7 +78,7 @@ test
 > 
 > <code>THREADS</code> – количество потоков.
 
-## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/AUTO-1117/6/allure/)
+## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/C01-elena_alexandrovna31-WB-WebUI/13/allure/)
 
 ### :pushpin: Главная страница Allure-отчета
 
@@ -96,6 +98,20 @@ test
 <img title="Allure Overview Dashboard" src="images/screenshots/allure-stata.png">
 </p>
 
+## <img width="4%" title="Allure TestOps Report" src="images/logo/Allure_TestOps.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/C01-elena_alexandrovna31-WB-WebUI/13/allure/)
+
+### :pushpin: Тест кейсы в Allure Test Ops отчете 
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screenshots/allure-testops-testcases.png">
+</p>
+
+### :pushpin: Статистика в Allure Test Ops 
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screenshots/allure-testops-stata.png">
+</p>
+
 
 ## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
@@ -104,7 +120,7 @@ test
 <img title="Telegram Notifications" src="images/screenshots/telegram-report.png">
 </p>
 
-## <img width="4%" title="Telegram" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
+## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
 
 К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">

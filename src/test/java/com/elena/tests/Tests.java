@@ -114,7 +114,6 @@ public class Tests extends TestBase {
                 Arguments.of("Беларусь","https://by.wildberries.ru/"),
                 Arguments.of("Израиль","https://wildberries.co.il/"),
                 Arguments.of("Казахстан","https://kz.wildberries.ru/"),
-                Arguments.of("Беларусь","https://by.wildberries.ru/"),
                 Arguments.of("Киргизия","https://kg.wildberries.ru/"),
                 Arguments.of("Узбекистан","https://uz.wildberries.ru/")
         );
