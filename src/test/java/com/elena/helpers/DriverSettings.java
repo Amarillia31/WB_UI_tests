@@ -1,9 +1,7 @@
 package com.elena.helpers;
 
-import com.elena.config.Project;
 import com.codeborne.selenide.Configuration;
-import io.restassured.RestAssured;
-import org.aeonbits.owner.ConfigFactory;
+import com.elena.config.Project;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
