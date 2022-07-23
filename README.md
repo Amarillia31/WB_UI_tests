@@ -99,7 +99,7 @@ test
 <img title="Allure Overview Dashboard" src="images/screenshots/allure-stata.png">
 </p>
 
-## <img width="4%" title="Allure TestOps Report" src="images/logo/Allure_TestOps.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/C01-elena_alexandrovna31-WB-WebUI/13/allure/)
+## <img width="4%" title="Allure TestOps Report" src="images/logo/Allure_TestOps.svg"> Отчет о результатах тестирования в Allure TestOps
 
 ### :pushpin: Тест кейсы в Allure Test Ops отчете 
 
