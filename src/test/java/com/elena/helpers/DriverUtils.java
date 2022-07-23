@@ -20,6 +20,7 @@ public class DriverUtils {
 
 
     public static String getSessionId() {
+
         return ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
     }
 
@@ -44,6 +45,7 @@ public class DriverUtils {
     }
 
     public static String getConsoleLogs() { // todo refactor
+
         return String.join("\n", Selenide.getWebDriverLogs(BROWSER));
     }
 }

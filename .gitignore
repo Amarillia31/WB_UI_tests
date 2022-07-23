@@ -39,6 +39,5 @@ target/
 /gradlew.bat
 .todo
 src/test/resources/config/remote.properties
-src/test/resources/config/local.properties
 src/test/resources/config/example.properties
 
