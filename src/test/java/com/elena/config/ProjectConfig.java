@@ -10,11 +10,10 @@ import org.aeonbits.owner.Config;
 })
 public interface ProjectConfig extends Config {
     String browser();
-    @DefaultValue("99.0")
+    @DefaultValue("100.0")
     String browserVersion();
     @DefaultValue("1920x1080")
     String browserSize();
-    String browserMobileView();
     String remoteDriverUrl();
     String videoStorage();
     @DefaultValue("https://www.wildberries.ru/")
