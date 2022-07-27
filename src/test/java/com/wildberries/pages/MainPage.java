@@ -1,6 +1,5 @@
-package com.elena.pages;
+package com.wildberries.pages;
 
-import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
@@ -22,41 +21,54 @@ public class MainPage {
                     chatHeader = $("h2.chat__header");
 
     public void searchItem(String productName) {
-        mainPageSearchField.setValue(productName).pressEnter();}
+        mainPageSearchField.setValue(productName).pressEnter();
+    }
 
     public void checkDeliveryButton() {
-        deliveryButton.shouldBe(visible);}
+        deliveryButton.shouldBe(visible);
+    }
 
     public void clickToLoginPage() {
-        loginPage.click();}
+        loginPage.click();
+    }
 
     public void checkSellOnWbButton() {
-        sellOnWbButton.shouldBe(visible);}
+        sellOnWbButton.shouldBe(visible);
+    }
 
     public void checkWorkAtWbButton() {
-        workAtWbButton.shouldBe(visible);}
+        workAtWbButton.shouldBe(visible);
+    }
 
     public void checkReportProblemButton() {
-        reportProblemButton.shouldBe(visible);}
+        reportProblemButton.shouldBe(visible);
+    }
 
     public void openSellOnWbButton() {
-        sellOnWbButton.shouldBe(visible).click();}
+        sellOnWbButton.shouldBe(visible).click();
+    }
 
     public void switchTab(int index) {
-        switchTo().window(index);}
+        switchTo().window(index);
+    }
 
     public void hoverMenu() {
-        countryMenu.click();}
+        countryMenu.click();
+    }
 
     public void clickOnGeolocation(String CountryName) {
-        $(byText(CountryName)).click();}
+        $(byText(CountryName)).click();
+    }
 
     public void checkCurrentUrl(String pageUrl) {
-        webdriver().shouldHave(url(pageUrl));}
+        webdriver().shouldHave(url(pageUrl));
+    }
 
     public void checkChatBotIsAvailable() {
-        chatBot.click();}
+        chatBot.click();
+    }
 
     public void checkText(String header) {
-        chatHeader.shouldHave(text(header));}
+        chatHeader.shouldHave(text(header));
+    }
 }

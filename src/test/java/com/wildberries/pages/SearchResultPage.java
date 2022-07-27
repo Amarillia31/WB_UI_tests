@@ -1,4 +1,4 @@
-package com.elena.pages;
+package com.wildberries.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 
@@ -11,5 +11,6 @@ public class SearchResultPage {
     private final ElementsCollection itemCard = $$(".product-card__brand-name");
 
     public void checkItem(String productName) {
-        itemCard.findBy(text(productName)).shouldBe(visible);}
+        itemCard.findBy(text(productName)).shouldBe(visible);
+    }
 }

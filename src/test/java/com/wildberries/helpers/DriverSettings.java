@@ -1,7 +1,7 @@
-package com.elena.helpers;
+package com.wildberries.helpers;
 
 import com.codeborne.selenide.Configuration;
-import com.elena.config.Project;
+import com.wildberries.config.Project;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class DriverSettings {

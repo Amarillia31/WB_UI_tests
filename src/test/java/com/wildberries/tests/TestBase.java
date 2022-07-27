@@ -1,14 +1,15 @@
-package com.elena.tests;
+package com.wildberries.tests;
 
-import com.elena.config.Project;
-import com.elena.helpers.AllureAttachments;
-import com.elena.helpers.DriverSettings;
-import com.elena.helpers.DriverUtils;
-import com.elena.pages.AuthPage;
-import com.elena.pages.MainPage;
+import com.wildberries.config.Project;
+import com.wildberries.helpers.AllureAttachments;
+import com.wildberries.helpers.DriverSettings;
+import com.wildberries.helpers.DriverUtils;
+import com.wildberries.pages.AuthPage;
+import com.wildberries.pages.MainPage;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import com.elena.pages.SearchResultPage;
+import com.wildberries.pages.SearchResultPage;
+import com.wildberries.pages.SellersPage;
 import io.qameta.allure.junit5.AllureJunit5;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -24,16 +25,16 @@ public class TestBase {
     MainPage mainPage = new MainPage();
     SearchResultPage searchResultPage = new SearchResultPage();
     AuthPage authPage = new AuthPage();
+    SellersPage sellersPage = new SellersPage();
 
     @BeforeAll
     static void beforeAll() {
-            DriverSettings.configure();
+        DriverSettings.configure();
     }
 
     @BeforeEach
     public void beforeEach() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        open(Project.config.webUrl());
     }
 
     @AfterEach

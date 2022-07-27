@@ -1,4 +1,4 @@
-package com.elena.config;
+package com.wildberries.config;
 
 import org.aeonbits.owner.Config;
 

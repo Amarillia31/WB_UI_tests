@@ -1,4 +1,4 @@
-package com.elena.helpers;
+package com.wildberries.helpers;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
