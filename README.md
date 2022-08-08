@@ -127,7 +127,3 @@ test
 <p align="center">
 <img title="Selenoid Video" src="images/gif/video.gif">
 </p>
-
-
-:heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-:blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
